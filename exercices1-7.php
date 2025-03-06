@@ -40,6 +40,7 @@ $joursSemaine = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 
  * Utiliser une balise HTML paragraphe.
  */
 echo '<h2>Exercice 1</h2>';
+echo $joursSemaine[5];
 
 /**
  * Exercice 2:
@@ -49,6 +50,8 @@ echo '<h2>Exercice 1</h2>';
  */
 echo '<h2>Exercice 2</h2>';
 $indexAujourdhui = date("w");
+echo $indexAujourdhui.'<br>';
+echo $joursSemaine[$indexAujourdhui];
 
 /**
  * Exercice 3:
@@ -59,6 +62,9 @@ $indexAujourdhui = date("w");
  */
 echo '<h2>Exercice 3</h2>';
 
+print_r($joursSemaine);
+var_dump($joursSemaine);
+
 /**
  * Exercice 4:
  * Les weekends ne sont pas assez longs !!
@@ -68,12 +74,14 @@ echo '<h2>Exercice 3</h2>';
  * du tableau $monTableau
  */
 echo '<h2>Exercice 4</h2>';
+$joursSemaine[1] = "Encore dimanche";
 
 /**
  * Exercice 5:
  * Répéter l'exercice 3 pour vérifier que l'exercice 4 est correctement réalisé.
  */
 echo '<h2>Exercice 5</h2>';
+var_dump($joursSemaine);
 
 /**
  * Exercice 6:
@@ -82,6 +90,11 @@ echo '<h2>Exercice 5</h2>';
  * Vous pouvez utiliser la fonction count() pour compter le nombre d'element d'un tableau.
  */
 echo '<h2>Exercice 6</h2>';
+?><ul><?php
+for ($i = 0;$i < count($joursSemaine);$i++) {
+    echo '<li>'.$joursSemaine[$i].'</li>';
+}
+echo '</ul>';
 
 /**
  * Exercice 7:
@@ -93,8 +106,13 @@ echo '<h2>Exercice 6</h2>';
  *   }
  * pour en savoir plus: https://www.php.net/manual/fr/control-structures.foreach.php
  */
-echo '<h2>Exercice 7</h2>';
 
+echo '<h2>Exercice 7</h2>';
+echo '<ul>';
+foreach ($joursSemaine as $key => $value) {
+    echo '<li>'.$value.'</li>';
+}
+echo '</ul>';
 ?>
 </body>
 </html>

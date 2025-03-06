@@ -26,7 +26,13 @@ $nombres = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  */
 echo '<h2>Exercice 12</h2>';
 
-
+foreach ($tableDe AS $t) {
+    echo '<h2>Table de '.$t.'</h2>';
+    foreach ($nombres as $nombre) {
+        $resultat = $nombre * $t;
+        echo $nombre." * ".$t." = ".$resultat."<br>";
+    }
+}
 
 ?>
 </body>

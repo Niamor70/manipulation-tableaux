@@ -25,7 +25,9 @@ $message = [18, 29, 36, 33, 35, 45, 5, 30, 11, 40, 45, 8, 34, 20, 30, 20, 40, 5,
  * à vous d'afficher le message !
  */
 echo '<h2>Exercice 14</h2>';
-
+foreach ($message as $lettre) {
+    echo $lettres[$lettre];
+}
 ?>
 </body>
 </html>
